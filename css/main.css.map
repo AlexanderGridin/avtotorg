@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAAG;;AAKjB,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,aAAa;EACrB,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,IAAI;CAAG",
+    "sources": [
+        "../sass/main.sass",
+        "../sass/blocks/_layout.sass"
+    ],
+    "names": [],
+    "file": "main.css"
+}

@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: 1px solid red;
+  max-width: 1170px;
+  margin: auto;
+}
+/*# sourceMappingURL=main.css.map */
