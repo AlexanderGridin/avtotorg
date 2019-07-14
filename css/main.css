@@ -1,11 +1,214 @@
+/* COLORS */
+/* FONTS */
+/* SITE CUSTOM FONTS */
+/* Panton-ExtraBold */
+@font-face {
+  font-family: 'Panton';
+  src: url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.eot");
+  src: url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Panton-ExtraBold/Panton-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.woff") format("woff"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Open Sans Bold */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../assets/fonts/OpenSans/OpenSans-Bold.eot");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../assets/fonts/OpenSans/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/OpenSans/OpenSans-Bold.woff") format("woff"), url("../assets/fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Open Sans Regular */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.eot");
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../assets/fonts/OpenSans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/OpenSans/OpenSans-Regular.woff") format("woff"), url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* LAYOUT SETTINGS */
 * {
   margin: 0;
   padding: 0;
 }
 
+:root {
+  font-size: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: normal;
+}
+
+body *,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
 .container {
-  border: 1px solid red;
+  padding: 0.93em;
   max-width: 1170px;
   margin: auto;
+}
+
+.page > header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.site-header {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.site-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.site-nav {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background-color: #173e80;
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 0.93em 2.2em;
+  background-color: #df3c31;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #df3c31;
+  border: 2px solid #df3c31;
+  cursor: pointer;
+}
+
+/* SITE COMPONENTS */
+/* SITE-LOGO */
+.logo__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__text {
+  text-align: center;
+  margin-left: 1.56em;
+  color: #000000;
+}
+
+.logo__text--bigger {
+  color: #173e80;
+  font-family: 'Panton';
+  font-size: 1.56rem;
+}
+
+.menu {
+  padding: 0;
+}
+
+.menu__mobile-button {
+  background-color: yellow;
+}
+
+.menu__mobile-button button {
+  color: #ffffff;
+  background-color: red;
+  display: block;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu__mobile-button button:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu__list,
+.menu li {
+  width: 100%;
+}
+
+.menu a {
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu a:hover, .menu a.active {
+  background-color: #ffffff;
+  color: #173e80;
 }
 /*# sourceMappingURL=main.css.map */

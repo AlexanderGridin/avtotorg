@@ -29,17 +29,178 @@
     <link rel="stylesheet" href="./css/main.css">
 
 </head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            
+<body class="page page-front">
+    <header>
+        <div class="site-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" class="logo__link">
+                        <img src="./assets/imgs/logo.png" alt="Логотип компании" class="logo__icon">
+                        <div class="logo__text">
+                            <p class="logo__text--bigger">АвтоТоргСервис</p>
+                            <p class="logo__text--smaller">транспортная компания</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contacts">
+                    <div class="contacts__phones">
+                        <p>+7 (495) 67-77-88</p>
+                    </div>
+                    <div class="contacts__email">
+                        <a href="mailto:Autotorgsevis@info.ru">Autotorgsevis@info.ru</a>
+                    </div>
+                </div>
+                <button class="button button--invert callback-modal">Заказать звонок</button>
+            </div>
         </div>
+        <nav class="site-nav">
+            <div class="container menu">
+                <div class="menu__mobile-button">
+                    <button>Меню</button>
+                </div>
+                <ul class="menu__list menu__list--visible">
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main class="site-content">
-
+        <section class="section banner">
+            <div class="container">
+                <h1 class="page-main-header">ВЫГОДНЫЙ ВЫКУП ВАШЕГО АВТОМОБИЛЯ</h1>
+                <a href="/" class="button">Подробнее</a>
+            </div>
+        </section>
+        <section class="section new-cars">
+            <div class="container">
+                <h2 class="section-header">Новые поступления авто в наличии</h2>
+                <ul class="new-cars">
+                    <li class="new-cars__item">
+                        <img class="new-cars__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="new-cars__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="new-cars__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                    <li class="view-cards__item">
+                        <img class="view-cards__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="view-cards__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="view-cards__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                    <li class="view-cards__item">
+                        <img class="view-cards__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="view-cards__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="view-cards__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                    <li class="view-cards__item">
+                        <img class="view-cards__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="view-cards__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="view-cards__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                </ul>
+                <a href="/" class="button">Весь список</a>
+            </div>
+        </section>
+        <section class="section services">
+            <div class="container">
+                <h2 class="section-header">услуги</h2>
+                <ul class="view-services">
+                    <li class="view-services__item">
+                        <img src="" alt="Картинка услуги" class="view-services__items-img">
+                        <h3 class="view-services__item-header">продажа автомобилей с пробегом</h3>
+                    </li>
+                    <li class="view-services__item">
+                        <img src="" alt="Картинка услуги" class="view-services__items-img">
+                        <h3 class="view-services__item-header">срочный выкуп вашего авто</h3>
+                    </li>
+                    <li class="view-services__item">
+                        <img src="" alt="Картинка услуги" class="view-services__items-img">
+                        <h3 class="view-services__item-header">комиссионная продажа автомобилей</h3>
+                    </li>
+                    <li class="view-services__item">
+                        <img src="" alt="Картинка услуги" class="view-services__items-img">
+                        <h3 class="view-services__item-header">обмен (trade-in) на выгодных  условиях</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section best-deals">
+            <div class="container">
+                <h2 class="section-header">ЛУЧШИЕ ПРЕДЛОЖЕНИЯ</h2>
+                <ul class="new-cars">
+                    <li class="new-cars__item">
+                        <img class="new-cars__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="new-cars__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="new-cars__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                    <li class="view-cards__item">
+                        <img class="view-cards__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="view-cards__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="view-cards__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                    <li class="view-cards__item">
+                        <img class="view-cards__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="view-cards__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="view-cards__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                    <li class="view-cards__item">
+                        <img class="view-cards__item-img" src="" alt="Фото автомобиля">
+                        <h3 class="view-cards__item-header">Mercedes-Benz C-klasse 180 III (W204) Рестайлинг 2012 г.</h3>
+                        <p class="view-cards__item-price">775 000 руб.</p>
+                        <a href="/" class="button button--invert">Подробнее</a>
+                    </li>
+                </ul>
+                <a href="/" class="button">Весь список</a>
+            </div>
+        </section>
+        <section class="section about">
+            <div class="container">
+                <h2 class="section-header">О КОМПАНИИ</h2>
+                <div class="about-text">
+                    <p>Не можете найти подходящий автомобиль за хорошую цену ? Тогда собирайтесь за покупкой в автосалон официального дилера «МАС МОТОРС»! Из г. Ростов очень выгодно отправляться за новым или подержанным автомобилем в наш салон. Только в «МАС МОТОРС» вы сможете одновременно увидеть и сравнить более трехсот автомобилей всех классов, типов кузова и комплектацией, представляющих тридцать два бренда из России, Кореи, Японии, Германии, Китая, США, Франции и других стран! В «МАС МОТОРС» вы можете приобрести любой понравившийся вам автомобиль в рассрочку или кредит, а также воспользоваться услугами программы TRADE-IN.</p>
+                    <p>Мы работаем с 24 банками-партнерами, которые предоставляют нашим клиентам свои услуги на самых выгодных условиях. Кредит с первоначальным взносом от 0 рублей и процентом от 6,5% годовых.</p>
+                    <p>Одобрение получают 98% клиентов нашего салона! Срок кредитования – от 6 месяцев до 7 лет. Сумма кредита – до 3 500 000 рублей. Рассрочка с первоначальным взносом от 30% и нулевым процентом! Рассрочка оформляется сроком до трех лет на сумму до 1 000 000 рублей. Приезжайте в автосалон официального дилера «МАС МОТОРС», и мы гарантируем, что вы сможете найти у нас автомобиль своей мечты!</p>
+                </div>
+            </div>
+        </section>
+        <div class="section map">
+            
+        </div>
     </main>
-    <footer class="site-footer">
-
+    <footer>
+        <div class="site-footer">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" class="logo__link">
+                        <img src="./assets/imgs/logo.png" alt="Логотип компании" class="logo__icon">
+                        <div class="logo__text">
+                            <p class="logo__text--bigger">АвтоТоргСервис</p>
+                            <p class="logo__text--smaller">транспортная компания</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contacts">
+                    <div class="contacts__phones">
+                        <p>+7 (495) 67-77-88</p>
+                    </div>
+                    <div class="contacts__email">
+                        <a href="mailto:Autotorgsevis@info.ru">Autotorgsevis@info.ru</a>
+                    </div>
+                </div>
+                <button class="button button--invert callback-modal">Заказать звонок</button>
+            </div>
+        </div>
     </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

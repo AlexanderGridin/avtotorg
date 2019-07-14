@@ -1,0 +1,43 @@
+.menu
+    padding: 0
+
+    &__mobile-button
+        background-color: yellow
+
+        button
+            color: $light-primary-color
+            background-color: red
+            display: block
+            font-size: 0
+            width: 50px
+            height: 50px
+            transition: 0.4s
+
+            &:hover
+                background-color: gray
+                cursor: pointer
+
+
+    &__list
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 0
+        overflow: hidden
+        transition: 1s
+
+    &__list,
+    li
+        width: 100%
+
+    a
+        color: $light-primary-color
+        display: block
+        text-align: center
+        padding: 1em 0
+        transition: 0.4s
+
+        &:hover,
+        &.active
+            background-color: $light-primary-color
+            color: $dark-primary-color

@@ -3,9 +3,49 @@
     padding: 0
     
 \:root
-    // background-color: red
+    font-size: 1em
+    box-sizing: border-box
+    font-family: 'Open Sans', Arial, sans-serif
+    font-weight: normal
+
+body *,
+::before,
+::after
+    box-sizing: inherit
+
+// body * + *
+//     margin-top: 1.5em
+
+ul
+    list-style: none
+
+a
+    text-decoration: none
+
+button
+    border: none
+    background: none
+    font-family: inherit
 
 .container
-    border: 1px solid red
+    // border: 1px solid #E1E1E1
+    padding: 0.93em
     max-width: 1170px
     margin: auto
+
+.page > header
+    display: flex
+    flex-direction: column
+
+.site-header 
+    order: 2
+
+    .container
+        display: flex
+        flex-direction: column
+        align-items: center
+        order: 2
+
+.site-nav
+    order: 1
+    background-color: $dark-primary-color
