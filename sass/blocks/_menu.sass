@@ -1,30 +1,76 @@
 .menu
     padding: 0
 
-    &__mobile-button
-        background-color: yellow
+    &__mobile-close-button
+        display: block
+        width: 50px
+        height: 50px
+        border: 1px solid red
+        margin-left: auto
+        margin-bottom: 25px
+        transition: 0.4s
 
-        button
-            color: $light-primary-color
+        &:hover
             background-color: red
-            display: block
+            cursor: pointer
+
+    &__mobile-controls
+        font-size: 0
+        display: flex
+
+        &-open,
+        &-close
             font-size: 0
-            width: 50px
-            height: 50px
+            display: block
+            width: 35px
+            height: 35px
+            padding: 7px
             transition: 0.4s
 
+            svg
+                fill: white
+                transition: 0.4s
+
             &:hover
-                background-color: gray
+                background-color: $light-primary-color
                 cursor: pointer
 
+                svg
+                    fill: $dark-primary-color
+
+        &-close
+            display: block
+            margin-left: auto
+            top: -100px
+            position: relative
+            transition: 0.7s
+            z-index: 9
+            visibility: hidden
+
+            &--visible
+                top: 0
+                visibility: initial
+        
 
     &__list
         display: flex
         flex-direction: column
         align-items: center
-        height: 0
         overflow: hidden
-        transition: 1s
+        transition: 0.7s
+        position: fixed
+        top: 0
+        width: 100%
+        background-color: $dark-primary-color
+        height: 100vh
+        z-index: 1
+        right: -100vw
+        overflow-y: auto
+        padding-top: 49px
+
+        &--visible
+            right: 0
+            
 
     &__list,
     li

@@ -5,7 +5,7 @@
 @font-face {
   font-family: 'Panton';
   src: url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.eot");
-  src: url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Panton-ExtraBold/Panton-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.woff") format("woff"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.ttf") format("truetype");
+  src: url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.woff") format("woff"), url("../assets/fonts/Panton-ExtraBold/Panton-ExtraBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 800;
 }
@@ -32,6 +32,7 @@
 * {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 :root {
@@ -49,6 +50,12 @@ body *,
           box-sizing: inherit;
 }
 
+body {
+  position: static;
+  background-color: #fff;
+  z-index: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -61,6 +68,17 @@ button {
   border: none;
   background: none;
   font-family: inherit;
+}
+
+.page-main-header {
+  text-align: center;
+  line-height: 1.3;
+  font-size: 2.25rem;
+  margin: 50px 0;
+}
+
+.page-front .page-main-header {
+  color: white;
 }
 
 .container {
@@ -96,9 +114,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .site-nav {
@@ -106,6 +124,25 @@ button {
       -ms-flex-order: 1;
           order: 1;
   background-color: #173e80;
+}
+
+.section {
+  background-color: #173e80;
+}
+
+.banner {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/imgs/Avtotorg-Banner-Glav-pro-min.jpg);
 }
 
 /* BUTTON */
@@ -131,6 +168,10 @@ button {
 
 /* SITE COMPONENTS */
 /* SITE-LOGO */
+.logo {
+  margin-bottom: 25px;
+}
+
 .logo__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,28 +193,124 @@ button {
   font-size: 1.56rem;
 }
 
-.menu {
-  padding: 0;
+.contacts {
+  text-align: center;
 }
 
-.menu__mobile-button {
-  background-color: yellow;
+.contacts__phones, .contacts__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
+  font-size: 0.875rem;
+  line-height: 1.3;
 }
 
-.menu__mobile-button button {
-  color: #ffffff;
-  background-color: red;
+.contacts__phones::before, .contacts__email::before {
+  content: "";
   display: block;
-  font-size: 0;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contacts__phones::before {
+  width: 12px;
+  height: 13px;
+  background-image: url(../assets/imgs/phones.png);
+}
+
+.contacts__email::before {
+  width: 19px;
+  height: 13px;
+  background-image: url(../assets/imgs/mail.png);
+}
+
+.contacts__email a {
+  color: inherit;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.menu__mobile-button button:hover {
-  background-color: gray;
+.contacts__email a:hover {
+  color: #df3c31;
+}
+
+.menu {
+  padding: 0;
+}
+
+.menu__mobile-close-button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  margin-left: auto;
+  margin-bottom: 25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu__mobile-close-button:hover {
+  background-color: red;
   cursor: pointer;
+}
+
+.menu__mobile-controls {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__mobile-controls-open, .menu__mobile-controls-close {
+  font-size: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu__mobile-controls-open svg, .menu__mobile-controls-close svg {
+  fill: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu__mobile-controls-open:hover, .menu__mobile-controls-close:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.menu__mobile-controls-open:hover svg, .menu__mobile-controls-close:hover svg {
+  fill: #173e80;
+}
+
+.menu__mobile-controls-close {
+  display: block;
+  margin-left: auto;
+  top: -100px;
+  position: relative;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 9;
+  visibility: hidden;
+}
+
+.menu__mobile-controls-close--visible {
+  top: 0;
+  visibility: initial;
 }
 
 .menu__list {
@@ -187,10 +324,22 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 0;
   overflow: hidden;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #173e80;
+  height: 100vh;
+  z-index: 1;
+  right: -100vw;
+  overflow-y: auto;
+  padding-top: 49px;
+}
+
+.menu__list--visible {
+  right: 0;
 }
 
 .menu__list,
