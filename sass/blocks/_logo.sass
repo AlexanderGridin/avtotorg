@@ -5,13 +5,32 @@
     &__link
         display: flex
         align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        flex-direction: column
+
+    &__icon
+        margin-bottom: 15px
 
     &__text
         text-align: center
-        margin-left: 1.56em
+        // margin-left: 1.56em
         color: $primary-text
 
         &--bigger
             color: $dark-primary-color
             font-family: 'Panton'
             font-size: 1.56rem
+
+@media screen and (min-width: 490px)
+    .logo
+
+        &__link
+            flex-direction: row
+
+        &__icon
+            margin-right: 25px
+
+@media screen and (min-width: 940px)
+    .logo
+        margin-bottom: 0

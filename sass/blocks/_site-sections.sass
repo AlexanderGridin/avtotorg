@@ -1,12 +1,49 @@
 .section
     background-color: $dark-primary-color
 
-.banner
-    height: 80vh
-    display: flex
-    align-items: center
-    text-align: center
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-    background-image: url(../assets/imgs/Avtotorg-Banner-Glav-pro-min.jpg)
+    &__banner
+        height: 80vh
+        display: flex
+        align-items: center
+        text-align: center
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        background-image: url('../assets/imgs/Avtotorg-Banner-Glav-pro-min.jpg')
+
+    &__new-cars
+        background-color: $primary-color
+        text-align: center
+
+        .button
+            margin-top: 50px
+            margin-bottom: 100px
+    
+    &__services
+        text-align: center
+        padding-bottom: 150px
+
+        .section-header
+            color: $light-primary-color
+
+    &__best-deals
+        background-color: $primary-color
+        text-align: center
+
+        .button
+            margin-top: 45px
+            margin-bottom: 80px
+
+    &__about
+        text-align: center
+        color: $light-primary-color
+        padding-bottom: 160px
+
+        .section-header
+            color: $light-primary-color
+
+@media screen and (min-width: 760px)
+    .section
+
+        &__about
+            text-align: left
