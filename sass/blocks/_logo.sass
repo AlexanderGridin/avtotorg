@@ -14,13 +14,21 @@
 
     &__text
         text-align: center
-        // margin-left: 1.56em
         color: $primary-text
+        transition: 0.4s
 
         &--bigger
             color: $dark-primary-color
-            font-family: 'Panton'
+            font-family: 'Panton', Arial, sans-serif
             font-size: 1.56rem
+            transition: 0.4s
+    
+    &:hover
+        .logo__text
+            color: #DF3C31
+
+            &--bigger
+                color: #DF3C31
 
 @media screen and (min-width: 490px)
     .logo

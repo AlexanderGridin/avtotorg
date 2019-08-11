@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', main);
 function main()
 {
     mobileMenu();
+    showModal();
 }
 
 function mobileMenu()
@@ -41,4 +42,33 @@ function mobileMenu()
         menuList.classList.remove('menu__list--visible');
         menuCloseButton.classList.remove('menu__mobile-controls-close--visible');
     });
+}
+
+function showModal()
+{
+    const modal = document.querySelector('.modal');
+    const showModalButtons = document.querySelectorAll('.show-modal');
+    const closeModalElements = document.querySelectorAll(".modal-close");
+
+    for(let i = 0; i < showModalButtons.length; i++)
+    {
+        showModalButtons[i].addEventListener('click', setModalVisible);
+    }
+
+    for(let i = 0; i < closeModalElements.length; i++)
+    {
+        closeModalElements[i].addEventListener('click', hideModal);
+    }
+
+    function setModalVisible(e)
+    {
+        e.preventDefault();
+        modal.classList.add('visible');
+    }
+
+    function hideModal(e)
+    {
+        e.preventDefault();
+        modal.classList.remove('visible');
+    }
 }
