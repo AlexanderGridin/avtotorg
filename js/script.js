@@ -4,6 +4,7 @@ function main()
 {
     mobileMenu();
     showModal();
+    srollTop();
 }
 
 function mobileMenu()
@@ -71,4 +72,41 @@ function showModal()
         e.preventDefault();
         modal.classList.remove('visible');
     }
+}
+
+function srollTop()
+{
+    let goTopBtn = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', trackScroll);
+    goTopBtn.addEventListener('click', backToTop);
+
+    function trackScroll() 
+    {
+        let scrolled = window.pageYOffset;
+        let coords = document.documentElement.clientHeight;
+
+        if (scrolled > coords) 
+        {
+          goTopBtn.classList.add('back-to-top--visible');
+        }
+
+        if (scrolled < coords) 
+        {
+          goTopBtn.classList.remove('back-to-top--visible');
+        }
+    }
+    
+    function backToTop() 
+    {
+        if (window.pageYOffset > 0) 
+        {
+            window.scrollBy(0, -30);
+            setTimeout(backToTop, 0);
+        }
+    }
+    
+      
+    
+      
 }
